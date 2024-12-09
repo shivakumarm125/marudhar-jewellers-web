@@ -1,0 +1,38 @@
+/* Block: card */
+.card {
+    width: 15rem;
+    height: 20rem;
+    padding: 3rem;
+  
+    /* Element: __image */
+    &__image {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+  
+      /* Modifier: --responsive for the image */
+      &--responsive {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  
+    /* Element: __description */
+    &__description {
+      padding: 0.5rem;
+  
+      /* Modifier: --price */
+      &--price {
+        font-size: 1rem;
+        font-weight: bold;
+      }
+  
+      /* Modifier: --story */
+      &--story {
+        font-size: 0.875rem;
+        color: #666;
+      }
+    }
+  }
+  
