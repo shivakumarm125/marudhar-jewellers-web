@@ -1,20 +1,22 @@
+import { CardProps } from "../../types/Card.d";
 import "./Card.scss";
 
-const Card = () => {
+const Card = (props: CardProps) => {
+  // const { imageUrl } = props.imageUrl;
   return (
     <>
       <div className="card">
         <div className="card__image">
-          <img 
-            className="card__image--responsive" 
-            src="https://images.unsplash.com/photo-1417325384643-aac51acc9e5d" 
+          <img
+            className="card__image--responsive"
+            src={props.imageUrl}
             alt="Card description"
           />
         </div>
         <div className="card__description">
-          <div className="card__description--price">700</div>
+          <div className="card__description--price">{props.price}</div>
           <div className="card__description--story">
-            A nice meaning in description mentioned here
+            {props.imageDescription}
           </div>
         </div>
       </div>
