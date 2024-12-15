@@ -24,6 +24,12 @@
   &__description {
     padding: 0.5rem;
 
+    /* Modifier: --title */
+    &--title {
+      font-size: 1.3rem;
+      font-weight: bold;
+    }
+
     /* Modifier: --price */
     &--price {
       font-size: 1rem;
