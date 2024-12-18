@@ -4,16 +4,16 @@ import { useNavigate } from "react-router-dom";
 
 
 const Card = (props: CardProps) => {
-  const { imageUrl, width, height, price, imageDescription, imageTitle } = props;
+  const { id, imageUrl, width, height, price, imageDescription, imageTitle } = props;
   const navigate = useNavigate();
 
-  const navigateToProductDetails = () => {
-    navigate("/product");
+  const navigateToProductDetails = (id: number) => {
+    navigate(`/product/${id}`);
   };
   
   return (
     <>
-      <div className="card" style={{width: width || "15rem", height: height || "25rem"}} onClick={navigateToProductDetails}>
+      <div className="card" style={{width: width || "15rem", height: height || "25rem"}} onClick={() => navigateToProductDetails(id)}>
         <div className="card__image">
           <img
             className="card__image--responsive"
