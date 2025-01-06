@@ -17,7 +17,7 @@ const ProductDetails = () => {
   return (
     <>
       <div>Product: {id}</div>
-      <div className="product">
+      {/* <div className="product">
         <div className="card__image">
           <div className="card__image--multiple">
             <div className="card__image--multiple-single">
@@ -44,11 +44,40 @@ const ProductDetails = () => {
               alt="Card description"
             />
           </div>
-          <div>
+        </div>
+        <div>
             <div>Price : 200</div>
             <div> how are you?</div>
           </div>
+      </div> */}
+
+      <div className="product">
+        <div className="product__image">
+          <div className="product__image--multiple">
+            {images.map((image) => {
+              return (
+                <div
+                  className="product__image--multiple-single-main"
+                  onClick={() => setSelectedImage(image)}
+                >
+                  <img
+                    className="product__image--responsive"
+                    src={image}
+                    alt="Card description"
+                  />
+                </div>
+              );
+            })}
+          </div>
+          <div className="product__image--main">
+            <img
+              className="card__image--responsive"
+              src={selectedImage}
+              alt="Card description"
+            />
+          </div>
         </div>
+        <div className="product-description">Price: 200</div>
       </div>
     </>
   );
